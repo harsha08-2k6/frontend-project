@@ -1,0 +1,118 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f3 0%, #e0efff 100%);
+}
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.25);
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.role-pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.role-pill.student {
+  box-shadow: 0 4px 12px rgba(67, 233, 123, 0.3);
+}
+
+.role-pill.teacher {
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);
+}
+
+.header-subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.header-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-main {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  min-height: calc(100vh - 180px);
+  margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 70px;
+    padding: 16px;
+  }
+  .dashboard-header {
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+  .header-actions {
+    gap: 10px;
+  }
+  .action-button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .dashboard-main {
+    border-radius: 12px;
+    padding: 16px;
+    min-height: calc(100vh - 160px);
+  }
+}
